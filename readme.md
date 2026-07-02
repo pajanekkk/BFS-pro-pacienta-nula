@@ -13,3 +13,7 @@ Samotný program v Pythonu jsme rozdělili do tří logických kroků:
 3. **Retrospektivní BFS a průnik:** Program vezme seznam nakažených uzlů a pro každý z nich spustí samostatné hledání. Používáme k tomu frontu `deque`, která je optimalizovaná na rychlost a pro tento úkol nezbytný. Algoritmus z vybraného uzlu skáče po otočených hranách do minulosti a všechny nalezené počítače ukládá do množiny `predci_uzlu`. Nakonec k nim přidá i startovní uzel sám o sobě, protože musíme počítat s variantou, že nákaza vznikla přímo na něm (třeba z infikované flashky).
 
 Na úplném konci program provede funkci `set.intersection`, což je průnik všech nalezených množin. Pacientem Nula totiž může být pouze ten počítač, který se objevil v historii úplně všech nakažených stanic. S využitím fronty má celé tohle hledání optimální časovou složitost $O(|V| + |E|)$, takže by skript bleskově prohledal i obrovskou infrastrukturu.
+
+
+
+**autoři**: Tomáš Rataj a Pavel Hovjadský
